@@ -267,8 +267,8 @@ template<class T, int size>
 T Vector<T, size>::cross(const Vector<T, 2> &other) const
 {
 	if (size != 2)
-		throw std::domain_error(std::string("Vector cross product
-				not defined for Vector<")
+		throw std::domain_error(std::string("Vector cross product "
+				"not defined for Vector<")
 				+ typeid(T).name() + ", " + std::to_string(size)
 				+ ">, Vector<" + typeid(T).name() + ", 2>");
 	return v[0] * other[1] - v[1] * other[0];
@@ -278,8 +278,8 @@ template<class T, int size>
 Vector<T, 3> Vector<T, size>::cross(const Vector<T, 3> &other) const
 {
 	if (size != 3)
-		throw std::domain_error(std::string("Vector cross product
-				not defined for Vector<")
+		throw std::domain_error(std::string("Vector cross product "
+				"not defined for Vector<")
 				+ typeid(T).name() + ", " + std::to_string(size)
 				+ ">, Vector<" + typeid(T).name() + ", 3>");
 	return Vector<T, 3> { v[1] * other[2] - v[2] * other[1],
